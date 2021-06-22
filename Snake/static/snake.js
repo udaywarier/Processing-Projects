@@ -1,4 +1,5 @@
 // Class to hold all information about the snake.
+// TODO: Implement the snake growing!
 class Snake {
     constructor(snake_width, snake_height) {
         this.pos_x = 0;
@@ -12,6 +13,7 @@ class Snake {
     // Updates the velocity of the snake based on which arrow key the user pressed. You lose if the new direction you pick
     // is exactly opposite to where you are already going!
     update_velocity(new_velocity_x, new_velocity_y) {
+        // TODO: This should not happen if the size of the snake is 1!
         if(this.velocity_x == -new_velocity_x || this.velocity_y == -new_velocity_y) {
             return true;
         } else {
